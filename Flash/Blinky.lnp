@@ -1,0 +1,9 @@
+--cpu Cortex-M4.fp
+".\flash\startup_stm32f40_41xxx.o"
+".\flash\system_stm32f4xx.o"
+".\flash\led.o"
+".\flash\blinky.o"
+--library_type=microlib --strict --scatter ".\Flash\Blinky.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Flash\Blinky.map" -o .\Flash\Blinky.axf
